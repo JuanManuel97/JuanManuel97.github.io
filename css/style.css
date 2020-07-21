@@ -127,6 +127,7 @@ body {
     height: 20.1875rem;
     left: 10.9375rem;
     top: 49.9375rem;
+    margin-bottom: 2rem;
 
     /* background */
     
@@ -144,4 +145,20 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+ }
+
+ .footer{
+    width: 100%;
+    max-width: 84.375rem;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    color: #FFFFFF;
  }
