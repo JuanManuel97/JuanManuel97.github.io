@@ -11,7 +11,7 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 34px;
-    padding-bottom: 34px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +60,7 @@ body {
 }
 
 .page {
-    padding-top: 77px;
+    padding-top: 3.6875rem;
 }
 
  .page-top {
