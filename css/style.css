@@ -1,164 +1,192 @@
-
-
 body {
-    font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .header {
-    width: 100%;
-    max-width: 84.375rem;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 34px;
+  width: 100%;
+  max-width: 84.375rem;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 34px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    background: #E5F8F9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background: #e5f8f9;
 }
 
 .wrap {
-    width: 100%;
-    max-width: 84.375rem;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    
+  width: 100%;
+  max-width: 84.375rem;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .nav {
-    display: flex;
-    list-style-type: none;
-    justify-content: flex-start;
-    font-size: 16px;
-    align-items: center;
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-start;
+  font-size: 16px;
+  align-items: center;
 }
 
-.nav>li {
-    margin-left: 4.875rem;
+.nav > li {
+  margin-left: 4.875rem;
 }
 
-.nav>li>a {
-    text-decoration: none;
-    color: #0D2B68;    
-    line-height: 103.9%;
+.nav > li > a {
+  text-decoration: none;
+  color: #0d2b68;
+  line-height: 103.9%;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .logo_img {
-    display: block;
-    width: 111px;
-    height: 46.85px;
-    background-image: url(../img/logo_caja.png);
-   
+  display: block;
+  width: 111px;
+  height: 46.85px;
+  background-image: url(../img/logo_caja.png);
 }
 
 .page {
-    padding-top: 3.6875rem;
+  padding-top: 3.6875rem;
 }
 
- .page-top {
-    border-radius: 0px 0px 7.5rem 0px;
- }
-
- .main-text-color {
-    color: #0D2B68 !important;
- }
-
- .second-text-color {
-    color: #6D6E79 !important;
- }
-
- .third-text-color {
-    color: #0079A1 !important;
- }
-
-
- .second-text-alignment {
-    text-align: center;
-    margin-left: 2.625rem;
-    margin-right: 2.625rem;
-
+.page-top {
+  border-radius: 0px 0px 7.5rem 0px;
 }
 
- .third-text-alignment {
-    margin-left: 3.4375rem;
-    margin-right: 3.4375rem;
+.main-text-color {
+  color: #0d2b68 !important;
+}
 
-    text-align: center;
- }
+.second-text-color {
+  color: #6d6e79 !important;
+}
 
+.third-text-color {
+  color: #0079a1 !important;
+}
+
+.second-text-alignment {
+  text-align: center;
+  margin-left: 2.625rem;
+  margin-right: 2.625rem;
+}
+
+.third-text-alignment {
+  margin-left: 3.4375rem;
+  margin-right: 3.4375rem;
+
+  text-align: center;
+}
 
 .main-text {
-    width: 34.375rem;
-    height: 31.125rem;
-    height: 100%;
+  width: 34.375rem;
+  height: 31.125rem;
+  height: 100%;
 }
 
-.img-center { 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.125rem;
-    margin-bottom: 1.875rem;
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.125rem;
+  margin-bottom: 1.875rem;
 }
 
- .consulta {
-    width: 25.5rem;
-    height: 28.375rem;
-    left: 47.9375rem;
-    top: 6.875rem;
-    margin-bottom: 4.5rem;
-    
-    background: #FFFFFF;
-    border-radius: 15px;
+.consulta {
+  width: 25.5rem;
+  height: 28.375rem;
+  left: 47.9375rem;
+  top: 6.875rem;
+  margin-bottom: 4.5rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px #c8f3f5;
+}
 
- }
+.campo-consulta {
+  height: 2.5rem;
+  width: 18.5rem;
+  left: 60.96%;
+  right: 17.11%;
+  top: 224px;
+  padding-left: 35px;
 
- .beneficios-item {
-    width: 20.1875rem;
-    height: 20.1875rem;
-    left: 10.9375rem;
-    top: 49.9375rem;
-    margin-bottom: 2rem;
+  background: #ffffff;
+  border: 1.3px solid #d9e4ee;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
 
-    /* background */
-    
-    background: #FFFFFF;
-    border: 0.14375rem solid #E6EDF7;
-    box-sizing: border-box;
-    border-radius: 0px 0px 3.125rem 0px;
- }
+.radio {
+  position: absolute;
+  left: 61.26%;
+  right: 36.96%;
+  top: 21.1%;
+  bottom: 77.64%;
 
- /*.beneficios {
+  background: #d9e4ee;
+  border-radius: 4px;
+}
+
+.button-aceptar {
+  background: #f7bb22;
+  box-shadow: 0px 10px 20px rgba(246, 187, 34, 0.51);
+  border-radius: 12px;
+  border:none;
+  font-weight: bold;
+  font-size:1rem;
+}
+
+.beneficios-item {
+  width: 20.1875rem;
+  height: 20.1875rem;
+  left: 10.9375rem;
+  top: 49.9375rem;
+  margin-bottom: 2rem;
+
+  /* background */
+
+  background: #ffffff;
+  border: 0.14375rem solid #e6edf7;
+  box-sizing: border-box;
+  border-radius: 0px 0px 3.125rem 0px;
+}
+
+/*.beneficios {
     
  }*/
 
- .flex-jumpline{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
- }
+.flex-jumpline {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
- .footer{
-    width: 100%;
-    max-width: 84.375rem;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.footer {
+  width: 100%;
+  max-width: 84.375rem;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    color: #FFFFFF;
- }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  color: #ffffff;
+}
