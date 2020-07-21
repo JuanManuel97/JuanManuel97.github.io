@@ -6,7 +6,7 @@ body {
 
 .header {
     width: 100%;
-    max-width: 1350px;
+    max-width: 84.375rem;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -21,7 +21,7 @@ body {
 
 .wrap {
     width: 100%;
-    max-width: 1350px;
+    max-width: 84.375rem;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -37,7 +37,7 @@ body {
 }
 
 .nav>li {
-    margin-left: 78px;
+    margin-left: 4.875rem;
 }
 
 .nav>li>a {
@@ -82,6 +82,12 @@ body {
 .main-text {
     width: 34.375rem;
     height: 31.125rem;
+}
+
+.img-center { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
  .consulta {
