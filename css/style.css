@@ -94,3 +94,9 @@ body {
     box-shadow: 0px 10px 30px #C8F3F5;
     border-radius: 15px;
  }
+
+ .beneficios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+ }
