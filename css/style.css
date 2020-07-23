@@ -1,5 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
+  /*width:123.671875rem;*/
 }
 
 .header {
@@ -14,7 +15,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  background: #FFFFFF;  
+  background: #ffffff;
 }
 
 .wrap {
@@ -166,10 +167,6 @@ body {
   border-radius: 0px 0px 3.125rem 0px;
 }
 
-/*.beneficios {
-    
- }*/
-
 .flex-jumpline {
   display: flex;
   justify-content: space-around;
@@ -179,7 +176,7 @@ body {
 .footer-parent {
   background: #0d2b68;
   height: 5.3125rem;
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0;
   width: 100%;
 }
@@ -198,4 +195,119 @@ body {
   align-items: center;
   box-sizing: border-box;
   color: #ffffff;
+}
+
+/*Aviso de si tiene o no productos*/
+.avisoProductos {
+  text-align: center;
+  background: #e5f8f9;
+  border-radius: 15px;
+}
+
+.avisoProductos > .contenedorGeneral {
+  display: inline-flex;
+  margin-top: 2.5rem;
+}
+
+.avisoProductos > .contenedorGeneral > .contenedorTexto {
+  margin-left: 1.625rem;
+  max-width: 21.6875rem;
+}
+
+.avisoProductos > .contenedorGeneral > .contenedorTexto > .titulo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  /* Color1 */
+
+  color: #0d2b68;
+}
+
+.avisoProductos > .contenedorGeneral > .contenedorTexto > .textoSecundario {
+  font-size: 1.2rem;
+  line-height: 25px;
+  color: #24252e;
+  font-weight: normal;
+}
+
+.producto-generico-item {
+  width: 20.1875rem;
+  height: 14.8125rem;
+  left: 10.9375rem;
+  top: 49.9375rem;
+  margin-bottom: 2rem;
+
+  background: #ffffff;
+  border: 1.3px solid #d9e4ee;
+  box-sizing: border-box;
+  border-radius: 0px 0px 30px 0px;
+}
+
+.contenedor-productos-genericos > .producto-generico-item > .titulos {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  /* Color1 */
+
+  color: #0d2b68;
+}
+
+.contenedor-productos-genericos > .producto-generico-item > .titulos > h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  /* Color1 */
+
+  color: #0d2b68;
+}
+
+.contenedor-productos-genericos > .producto-generico-item > .titulos > h3 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* colore */
+
+  color: #6d6e79;
+}
+
+.contenedor-productos-genericos > .producto-generico-item > hr {
+  display: flex;
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+  border: 0.3px solid #0079a1;
+}
+
+.contenedor-productos-genericos  > .producto-generico-item  > .descripcion-producto  > h3 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
