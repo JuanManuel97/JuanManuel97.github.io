@@ -1,136 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $("document").ready(function () {
+        document.getElementById("divResultado").style.display = "none";
+        document.getElementById("capitFinal").checked = true;
 
-        .slider {
-            position: relative;
-            max-width: 1000px;
-            margin: 50px auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
+        setInputFilter(document.getElementById("tiempoAhorro"), function (value) {
+            return /^\d*$/.test(value);
+        });
 
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+        setInputFilter(document.getElementById("montoAhorro"), function (value) {
+            return /^-?\d*[.,]?\d{0,2}$/.test(value);
+        });
 
-        .slides img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .navigation-dots {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .navigation-dots .dot {
-            height: 10px;
-            width: 10px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .navigation-dots .dot.active {
-            background-color: #717171;
-        }
-    </style>
-</head>
-<body>
-
-<div class="slider">
-    <div class="slides">
-        <img src="https://via.placeholder.com/1000x400/ff7f7f/333333?text=Slide+1" alt="Slide 1">
-        <img src="https://via.placeholder.com/1000x400/7f7fff/333333?text=Slide+2" alt="Slide 2">
-        <img src="https://via.placeholder.com/1000x400/7fff7f/333333?text=Slide+3" alt="Slide 3">
-    </div>
-</div>
-
-<div class="navigation-dots">
-    <div class="dot" data-index="0"></div>
-    <div class="dot" data-index="1"></div>
-    <div class="dot" data-index="2"></div>
-</div>
-
-<script>
-    const slides = document.querySelector('.slides');
-    const images = document.querySelectorAll('.slides img');
-    const dots = document.querySelectorAll('.dot');
-
-    let index = 0;
-    let startX, endX;
-    let isDragging = false;
-
-    function showSlide(i) {
-        index = (i + images.length) % images.length;
-        slides.style.transform = `translateX(${-index * 100}%)`;
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
-    }
-
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => showSlide(dot.dataset.index));
+        setInputFilter(document.getElementById("TREA"), function (value) {
+            return /^-?\d*[.,]?\d{0,2}$/.test(value);
+        });
     });
-
-    slides.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    slides.addEventListener('touchend', (e) => {
-        endX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
-
-    slides.addEventListener('mousedown', (e) => {
-        startX = e.clientX;
-        isDragging = true;
-    });
-
-    slides.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        endX = e.clientX;
-    });
-
-    slides.addEventListener('mouseup', () => {
-        if (!isDragging) return;
-        handleSwipe();
-        isDragging = false;
-    });
-
-    slides.addEventListener('mouseleave', () => {
-        if (!isDragging) return;
-        handleSwipe();
-        isDragging = false;
-    });
-
-    function handleSwipe() {
-        if (startX > endX + 50) {
-            showSlide(index + 1);
-        } else if (startX < endX - 50) {
-            showSlide(index - 1);
-        }
-    }
-
-    showSlide(index);
 </script>
 
-</body>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Calculadora TREA</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">CALCULADORA TREA</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" autocomplete="off">
+                        <div class="form-row">
+                            <div class="name">Monto a ahorrar</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input id="montoAhorro" class="input--style-5">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Tiempo (en d&iacuteas)</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input id="tiempoAhorro" class="input--style-5">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">TREA (en %)</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input id="TREA" class="input--style-5">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Tipo de Capitalizaci&oacute;n</label>
+                            <div class="p-t-15">
+                                <label style="margin-top: 1rem;"  class="radio-container m-r-55">Diaria
+                                    <input id="capitDiaria" type="radio" checked="checked" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label style="margin-top: 1rem;"   style="margin-top: 1rem;" class="radio-container m-r-55">Mensual
+                                    <input id="capitMensual" type="radio" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label style="margin-top: 1rem;"  class="radio-container m-r-55">Anual
+                                    <input id="capitAnual" type="radio" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label style="margin-top: 1rem;" class="radio-container">Al finalizar
+                                    <input id="capitFinal" type="radio" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <input onclick="calcular();" style="max-width: 11.1rem;" class="btn btn--radius-2 btn--red" value="Calcular"></input>
+                        </div>
+                        <div id="divResultado" style="margin-top: 1rem;">
+                            <label id="resultado" style="font-weight:bold;margin-top: 1rem;padding:0;" class="radio-container">
+                            </label>
+                            <label style="margin-top: 1rem;padding:0;font-size: 14px;" class="radio-container">El resultado puede diferir un poco al que vea reflejado en su cuenta debido a que la f&oacutermula est&aacute en
+                                funci&oacuten de
+                                meses de 30 d&iacuteas y a&ntildeos de 360
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="vendor/datepicker/moment.min.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global2.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>
+<!-- end document-->
